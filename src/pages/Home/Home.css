@@ -1,0 +1,81 @@
+.home {
+  height: 50vh;
+  justify-content: center;
+}
+
+.home-main {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding: 0 15px;
+  padding-top: 50px;
+}
+
+.home-main h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+
+.home-main-actions {
+  margin: 45px 0;
+  width: 65%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.home-main-actions input {
+  height: 100%;
+  flex: 1;
+  padding-left: 5px;
+  font-size: 20px;
+  outline: none;
+  border: none;
+  background-color: inherit;
+  border-radius: 10px;
+}
+
+.home-main-actions button {
+  height: 40px;
+  width: 80px;
+  margin: 5px 5px;
+  border: none;
+  outline: none;
+  background-color: #ab09ab;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* TABLE */
+
+.coinHeader {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr;
+  height: 50px;
+  align-items: center;
+  background-color: #0a0a81;
+  margin-top: 40px;
+  border: 1px solid white;
+}
+
+.coinHeader p {
+  font-size: 23px;
+  padding: 5px 5px;
+}
+
+.coinChange {
+  text-align: center;
+}
+
+.coinMarket {
+  text-align: end;
+}
+
+.type {
+  text-align: center;
+}
