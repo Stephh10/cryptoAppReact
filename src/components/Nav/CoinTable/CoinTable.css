@@ -6,6 +6,7 @@
   align-items: center;
   padding-right: 5px;
   font-weight: bold;
+  border-bottom: 1px solid white;
 }
 
 .coinName {
@@ -15,4 +16,22 @@
 .coinHeader p {
   font-size: 23px;
   padding: 5px 5px;
+}
+
+.coinTableCoins {
+  display: flex;
+  align-items: center;
+}
+
+.coinTableCoins img {
+  width: 35px;
+  height: 35px;
+}
+
+.green {
+  color: rgb(4, 255, 4);
+}
+
+.red {
+  color: red;
 }

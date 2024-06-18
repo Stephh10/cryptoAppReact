@@ -1,8 +1,16 @@
-import React from "react";
 import "./Home.css";
 import CoinTable from "../../components/Nav/CoinTable/CoinTable";
+import { useContext, useEffect, useState } from "react";
+import { CoinContext } from "../../context/CoinContext";
 
 export default function Home() {
+  const { allCoins } = useContext(CoinContext);
+  const [displayCoin, setDisplayCoin] = useState([]);
+
+  useEffect(() => {
+    setDisplayCoin(allCoins);
+  }, [allCoins]);
+
   return (
     <div className="home">
       <div className="home-main">
@@ -25,7 +33,9 @@ export default function Home() {
         <p className="coinChange">24HChange</p>
         <p className="coinMarket">Market Cap</p>
       </div>
-      <CoinTable />
+      {displayCoin.slice(0, 10).map((coin, index) => {
+        return <CoinTable key={index} coin={coin} />;
+      })}
     </div>
   );
 }
