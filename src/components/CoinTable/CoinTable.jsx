@@ -16,7 +16,6 @@ export default function CoinTable({ coin }) {
         <img src={coin.image} alt="coinLogo" />
         <p className="coinName">{coin.name}</p>
       </div>
-
       <p>
         {currency.symbol}
         {coin.current_price.toLocaleString()}

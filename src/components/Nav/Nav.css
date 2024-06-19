@@ -54,3 +54,16 @@
   justify-content: center;
   cursor: pointer;
 }
+
+@media screen and (max-width: 800px) {
+  .navHeader {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .navActions button {
+    font-family: 15px;
+    padding: 5px 7px;
+  }
+}

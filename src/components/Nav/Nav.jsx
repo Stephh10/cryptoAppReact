@@ -13,8 +13,8 @@ export default function Nav() {
     if (value === "eur") {
       return setCurrency({ type: "eur", symbol: "€" });
     }
-    if (value === "inr") {
-      return setCurrency({ type: "inr", symbol: "ir" });
+    if (value === "chf") {
+      return setCurrency({ type: "chf", symbol: "₣" });
     }
     setCurrency({ type: "usd", symbol: "$" });
   }
@@ -46,7 +46,7 @@ export default function Nav() {
         <select onChange={handleCurrencyUpdate}>
           <option value="usd">USD</option>
           <option value="eur">EUR</option>
-          <option value="inr">INR</option>
+          <option value="chf">CHF</option>
         </select>
         <button>
           Sign up <ArrowUpRight size={18} />

@@ -79,3 +79,27 @@
 .type {
   text-align: center;
 }
+
+@media screen and (max-width: 800px) {
+  .coinHeader {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr;
+  }
+
+  .home-main h1 {
+    font-size: 40px;
+  }
+
+  .home-main h3 {
+    font-size: 15px;
+  }
+
+  .home-main-actions button {
+    height: 40px;
+    width: 75px;
+  }
+
+  .home-main-actions {
+    width: 80%;
+  }
+}
