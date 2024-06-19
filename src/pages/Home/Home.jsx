@@ -1,7 +1,7 @@
 import "./Home.css";
-import CoinTable from "../../components/Nav/CoinTable/CoinTable";
 import { useContext, useEffect, useState } from "react";
 import { CoinContext } from "../../context/CoinContext";
+import CoinTable from "../../components/CoinTable/CoinTable";
 
 export default function Home() {
   const { allCoins } = useContext(CoinContext);

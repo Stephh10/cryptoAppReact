@@ -7,6 +7,13 @@
   padding-right: 5px;
   font-weight: bold;
   border-bottom: 1px solid white;
+  color: white;
+  text-decoration: none;
+}
+
+.coinTable:hover {
+  background-color: #601cb4;
+  cursor: pointer;
 }
 
 .coinName {

@@ -3,6 +3,7 @@ import "./Nav.css";
 import { CurrencyEth, ArrowUpRight } from "phosphor-react";
 import { useContext } from "react";
 import { CoinContext } from "../../context/CoinContext";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
   const { setCurrency } = useContext(CoinContext);
@@ -19,15 +20,27 @@ export default function Nav() {
   }
   return (
     <div className="nav">
-      <div className="navHeader">
+      <Link to={"/"} className="navHeader">
         <CurrencyEth size={32} />
         <h1>CryptoSite</h1>
-      </div>
+      </Link>
       <ul className="navItems">
-        <li>Home</li>
-        <li>Features</li>
-        <li>Pricing</li>
-        <li>Blog</li>
+        <Link to={"/"}>
+          {" "}
+          <li>Home</li>
+        </Link>
+        <Link to={"/"}>
+          {" "}
+          <li>Features</li>
+        </Link>
+        <Link to={"/"}>
+          {" "}
+          <li>Pricing</li>
+        </Link>
+        <Link to={"/"}>
+          {" "}
+          <li>Blog</li>
+        </Link>
       </ul>
       <div className="navActions">
         <select onChange={handleCurrencyUpdate}>

@@ -16,11 +16,18 @@
   display: flex;
   align-items: center;
   gap: 0.2rem;
+  color: white;
+  text-decoration: none;
 }
 
 .navItems li {
   padding: 8px 13px;
   cursor: pointer;
+}
+
+.navItems a {
+  color: white;
+  text-decoration: none;
 }
 
 .navActions select {

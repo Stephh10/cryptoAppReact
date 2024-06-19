@@ -1,0 +1,43 @@
+.coinDetails {
+  margin-top: 20px;
+}
+
+.coinDetailsWrapper {
+  display: flex;
+  padding: 30px 10px;
+}
+
+.detailsLeft {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.detailsRight {
+  flex: 1;
+  padding: 10px 20px;
+}
+
+.coinDetails img {
+  width: 100px;
+  height: 100px;
+}
+
+.coinDetails h1 {
+  font-size: 45px;
+}
+
+.loadingResponse {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.coinDetailsWrap {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 3px;
+  border-bottom: 0.5px solid #bebdbd;
+  margin-top: 8px;
+}

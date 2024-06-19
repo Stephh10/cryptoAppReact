@@ -1,7 +1,8 @@
 import React from "react";
 import "./CoinTable.css";
 import { useContext } from "react";
-import { CoinContext } from "../../../context/CoinContext";
+import { CoinContext } from "../../context/CoinContext";
+import { Link } from "react-router-dom";
 
 export default function CoinTable({ coin }) {
   const { currency } = useContext(CoinContext);
@@ -9,7 +10,7 @@ export default function CoinTable({ coin }) {
   const minusStyle = coin.market_cap_change_percentage_24h < 0;
 
   return (
-    <div className="coinTable">
+    <Link to={`/coin/${coin.id}`} className="coinTable">
       <p className="type">{coin.market_cap_rank}</p>
       <div className="coinTableCoins">
         <img src={coin.image} alt="coinLogo" />
@@ -27,6 +28,6 @@ export default function CoinTable({ coin }) {
         {currency.symbol}
         {coin.market_cap.toLocaleString()}
       </p>
-    </div>
+    </Link>
   );
 }
