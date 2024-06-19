@@ -1,23 +1,24 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Chart.css";
-import { useState, useEffect } from "react";
 import Chart from "react-google-charts";
 
 export default function ChartDisplay({ chartData }) {
   const [displayChart, setDisplayChart] = useState([["Date", "Price"]]);
 
   useEffect(() => {
-    const chartDataCopy = [["Date", "Price"]];
     if (chartData.prices) {
+      let displayChartCopy = [["Date", "Price"]];
       chartData.prices.map((item) => {
-        chartDataCopy.push([
-          `${new Date(item[0]).toLocaleString().slice(0, -16)}`,
+        displayChartCopy.push([
+          `${new Date(item[0]).toLocaleDateString().slice(0, -5)}`,
           item[1],
         ]);
+        console.log(item[1]);
       });
-      setDisplayChart(chartDataCopy);
+      setDisplayChart(displayChartCopy);
     }
   }, [chartData]);
+  console.log(displayChart);
   return (
     <div className="chart">
       <Chart

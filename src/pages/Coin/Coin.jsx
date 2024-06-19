@@ -28,7 +28,6 @@ export default function Coin() {
   }
 
   async function fetchChartData() {
-    console.log("hitt");
     const options = {
       method: "GET",
       headers: {
@@ -50,7 +49,7 @@ export default function Coin() {
     fetchChartData();
   }, [currency]);
 
-  if (coinData) {
+  if (coinData && chartData) {
     return (
       <div className="coinDetails">
         <div className="coinDetailsWrapper">
