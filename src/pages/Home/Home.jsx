@@ -6,6 +6,21 @@ import { CoinContext } from "../../context/CoinContext";
 export default function Home() {
   const { allCoins } = useContext(CoinContext);
   const [displayCoin, setDisplayCoin] = useState([]);
+  const [search, setSearch] = useState("");
+
+  function searchItem(e) {
+    setSearch(e.target.value);
+  }
+
+  function hanleCoinSearch(e) {
+    e.preventDefault();
+    const filteredCoins = allCoins.filter((item) =>
+      item.name.toLowerCase().includes(search.toLowerCase())
+    );
+
+    setDisplayCoin(filteredCoins);
+    setSearch("");
+  }
 
   useEffect(() => {
     setDisplayCoin(allCoins);
@@ -21,10 +36,15 @@ export default function Home() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
           ipsum, deleniti enim atque delectus laboriosam!
         </h3>
-        <div className="home-main-actions">
-          <input type="text" placeholder="Search crypto..." />
+        <form onSubmit={hanleCoinSearch} className="home-main-actions">
+          <input
+            onChange={searchItem}
+            value={search}
+            type="text"
+            placeholder="Search crypto..."
+          />
           <button>Search</button>
-        </div>
+        </form>
       </div>
       <div className="coinHeader">
         <p className="type">#</p>

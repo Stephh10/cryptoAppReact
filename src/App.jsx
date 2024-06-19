@@ -2,7 +2,6 @@ import Nav from "./components/Nav/Nav";
 import Home from "./pages/Home/Home";
 import Coin from "./pages/Coin/Coin";
 import CoinContextProvider from "./context/CoinContext";
-
 import { Routes, Route } from "react-router-dom";
 
 function App() {

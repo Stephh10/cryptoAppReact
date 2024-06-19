@@ -1,7 +1,10 @@
 import React from "react";
 import "./CoinTable.css";
+import { useContext } from "react";
+import { CoinContext } from "../../../context/CoinContext";
 
 export default function CoinTable({ coin }) {
+  const { currency } = useContext(CoinContext);
   const coinChange = coin.market_cap_change_percentage_24h;
   const minusStyle = coin.market_cap_change_percentage_24h < 0;
 
@@ -13,11 +16,17 @@ export default function CoinTable({ coin }) {
         <p className="coinName">{coin.name}</p>
       </div>
 
-      <p>{coin.current_price.toLocaleString()}</p>
+      <p>
+        {currency.symbol}
+        {coin.current_price.toLocaleString()}
+      </p>
       <p className={minusStyle ? "red coinChange" : "coinChange"}>
         {coinChange.toFixed(2)}
       </p>
-      <p className="coinMarket">{coin.market_cap.toLocaleString()}</p>
+      <p className="coinMarket">
+        {currency.symbol}
+        {coin.market_cap.toLocaleString()}
+      </p>
     </div>
   );
 }
